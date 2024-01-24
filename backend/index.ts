@@ -18,9 +18,9 @@ const app = express();
 // const allowedOrigins = ['https://pdf-merger-git-master-sam-nadars-projects.vercel.app/','https://pdf-merger-sam-nadars-projects.vercel.app/', 'https://pdf-merger-gray.vercel.app/']; // Add the specific URL(s) you want to allow
 
 const allowedOrigins = [
-  'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
-  'https://pdf-merger-sam-nadars-projects.vercel.app/',
-  'https://pdf-merger-gray.vercel.app/',
+  // 'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
+  // 'https://pdf-merger-sam-nadars-projects.vercel.app/',
+  // 'https://pdf-merger-gray.vercel.app/',
   'https://pdf-merger-git-master-sam-nadars-projects.vercel.app',
   'https://pdf-merger-sam-nadars-projects.vercel.app',
   'https://pdf-merger-gray.vercel.app',
