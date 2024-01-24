@@ -15,16 +15,16 @@ import { PdfFileModel, PdfFile, PdfFileDocument } from './db/index';
 const app = express();
 
 // Use the cors middleware with specific origin(s)
-const allowedOrigins = ['https://pdf-merger-git-master-sam-nadars-projects.vercel.app/','https://pdf-merger-sam-nadars-projects.vercel.app/', 'https://pdf-merger-gray.vercel.app/']; // Add the specific URL(s) you want to allow
+// const allowedOrigins = ['https://pdf-merger-git-master-sam-nadars-projects.vercel.app/','https://pdf-merger-sam-nadars-projects.vercel.app/', 'https://pdf-merger-gray.vercel.app/']; // Add the specific URL(s) you want to allow
 
-// const allowedOrigins = [
-//   'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
-//   'https://pdf-merger-sam-nadars-projects.vercel.app/',
-//   'https://pdf-merger-gray.vercel.app/',
-//   'https://pdf-merger-git-master-sam-nadars-projects.vercel.app',
-//   'https://pdf-merger-sam-nadars-projects.vercel.app',
-//   'https://pdf-merger-gray.vercel.app',
-// ];
+const allowedOrigins = [
+  'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
+  'https://pdf-merger-sam-nadars-projects.vercel.app/',
+  'https://pdf-merger-gray.vercel.app/',
+  'https://pdf-merger-git-master-sam-nadars-projects.vercel.app',
+  'https://pdf-merger-sam-nadars-projects.vercel.app',
+  'https://pdf-merger-gray.vercel.app',
+];
 
 const corsOptions: cors.CorsOptions = {
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
