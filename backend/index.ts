@@ -17,25 +17,25 @@ const app = express();
 // Use the cors middleware with specific origin(s)
 // const allowedOrigins = ['https://pdf-merger-git-master-sam-nadars-projects.vercel.app/','https://pdf-merger-sam-nadars-projects.vercel.app/', 'https://pdf-merger-gray.vercel.app/']; // Add the specific URL(s) you want to allow
 
-const allowedOrigins = [
-  'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
-  'https://pdf-merger-sam-nadars-projects.vercel.app/',
-  'https://pdf-merger-gray.vercel.app/',
-  'https://pdf-merger-git-master-sam-nadars-projects.vercel.app',
-  'https://pdf-merger-sam-nadars-projects.vercel.app',
-  'https://pdf-merger-gray.vercel.app',
-];
+// const allowedOrigins = [
+//   'https://pdf-merger-git-master-sam-nadars-projects.vercel.app/',
+//   'https://pdf-merger-sam-nadars-projects.vercel.app/',
+//   'https://pdf-merger-gray.vercel.app/',
+//   'https://pdf-merger-git-master-sam-nadars-projects.vercel.app',
+//   'https://pdf-merger-sam-nadars-projects.vercel.app',
+//   'https://pdf-merger-gray.vercel.app',
+// ];
 
-const corsOptions: cors.CorsOptions = {
-  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
-
+// const corsOptions: cors.CorsOptions = {
+//   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+//     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+// };
+const  corsOptions = {origin:process.env.FRONTEND_URL};
 app.use(cors(corsOptions));
 
 const port = process.env.PORT || 3000;
