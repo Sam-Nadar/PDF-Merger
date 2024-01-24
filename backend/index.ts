@@ -35,8 +35,9 @@ const app = express();
 //     }
 //   },
 // };
-const  corsOptions = {origin:process.env.FRONTEND_URL};
-app.use(cors(corsOptions));
+// const  corsOptions = {origin:process.env.FRONTEND_URL};
+// app.use(cors(corsOptions));
+app.use(cors());
 
 const port = process.env.PORT || 3000;
 
