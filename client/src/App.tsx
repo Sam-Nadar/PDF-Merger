@@ -50,7 +50,7 @@ function App() {
 
       // Upload files and get the response containing fileIds
       const response = await axios.post(
-        "https://pdf-merger-sam-nadar.onrender.com/upload",
+        "https://pdf-merger-sammy-nadar.onrender.com/upload",
         formData
       );
 
@@ -71,7 +71,7 @@ function App() {
     try {
       handleAlert();
       // Send a request to the server to perform the merging using actual fileIds
-      const response = await axios.post("https://pdf-merger-sam-nadar.onrender.com/merge", {
+      const response = await axios.post("https://pdf-merger-sammy-nadar.onrender.com/merge", {
         fileIds: uploadedFiles,
       });
 
