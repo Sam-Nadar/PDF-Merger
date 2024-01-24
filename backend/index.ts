@@ -4,11 +4,13 @@ import mongoose from 'mongoose';
 import multer from 'multer';
 import { PDFDocument } from 'pdf-lib';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 // Import the PdfFile model and schema
 import { PdfFileModel, PdfFile, PdfFileDocument } from './db/index';
 
-const MONGO_URI = "mongodb+srv://samjeevasj10:MaZsICapY31QWUwC@cluster0.6xtzqx8.mongodb.net/";
 
 const app = express();
 
@@ -31,8 +33,9 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+if(process.env.MONGO_URI){
 // Set up MongoDB connection (update with your MongoDB URI)
-mongoose.connect(MONGO_URI , { dbName: "pdfmerger" });
+mongoose.connect(process.env.MONGO_URI , { dbName: "pdfmerger" });}
 
 // Set up Multer for file uploads
 const storage = multer.memoryStorage();
