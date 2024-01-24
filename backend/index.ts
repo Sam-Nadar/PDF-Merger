@@ -15,7 +15,7 @@ import { PdfFileModel, PdfFile, PdfFileDocument } from './db/index';
 const app = express();
 
 // Use the cors middleware with specific origin(s)
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:3001']; // Add the specific URL(s) you want to allow
+const allowedOrigins = ['https://pdf-merger-git-master-sam-nadars-projects.vercel.app/','https://pdf-merger-sam-nadars-projects.vercel.app/', 'https://pdf-merger-gray.vercel.app/']; // Add the specific URL(s) you want to allow
 
 const corsOptions: cors.CorsOptions = {
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
